@@ -272,6 +272,24 @@ footer a:hover {
 }
 
 /* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+  }
+
+  .programs h3 {
+    font-size: 1.8em;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -291,25 +309,8 @@ footer a:hover {
     margin-bottom: 10px;
   }
 
-  table, th, td {
-    font-size: 14px;
-  }
-
-  button {
-    width: 100%;
-    text-align: center;
-  }
-
-  .gallery-grid {
-    flex-direction: column;
-  }
-
-  .gallery-item {
-    flex: 1 1 100%;
-  }
-
   .hero {
-    padding: 50px 20px;
+    padding: 60px 20px;
   }
 
   .hero h1 {
@@ -320,12 +321,45 @@ footer a:hover {
     font-size: 1em;
   }
 
-  .hero .btn {
-    padding: 10px 20px;
+  .programs h3 {
+    font-size: 1.5em;
+  }
+
+  .gallery-grid {
+    flex-direction: column;
+  }
+
+  .gallery-item {
+    flex: 1 1 100%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+
+  .programs h3 {
+    font-size: 1.2em;
+  }
+
   th, td {
     padding: 8px;
   }
