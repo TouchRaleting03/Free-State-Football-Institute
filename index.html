@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free State Football Institute Group</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FSFI Group | Football Development & Event Management</title>
+  <meta name="description" content="FSFI Group — football development non-profit offering elite training programmes and sports event management in the Free State." />
+  <meta property="og:title" content="FSFI Group | Football Development & Event Management" />
+  <meta property="og:description" content="Developing future football stars through elite training & event management." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/src/css/styles.css" />
+  <script type="module" src="/src/js/main.js"></script>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <header>
-    <div class="container">
-      <nav>
+    <div class="container header-content">
+      <a href="#home" class="brand-link" aria-label="FSFI Home">
+        <img src="/images/FSFI_GROUP.png" alt="FSFI Logo" class="crest" />
+      </a>
+
+      <div class="b-container" id="b-container">
+        <div class="b-menu" id="b-menu" role="button" tabindex="0" aria-label="Toggle navigation" aria-expanded="false">
+          <div class="b-bun b-bun--top"></div>
+          <div class="b-bun b-bun--mid"></div>
+          <div class="b-bun b-bun--bottom"></div>
+        </div>
+      </div>
+
+      <nav id="navbar" role="navigation" aria-label="Main navigation" class="site-nav">
         <ul>
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Our Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <img src="images/Free State Football Institution logo.jpeg" alt="Team Logo" class="logo centered-logo">
+
+      <div class="auth-buttons" id="auth-buttons">
+        <button id="login-btn" class="btn-secondary">Login</button>
+        <button id="register-btn" class="btn-secondary">Register</button>
+      </div>
+
+      <div class="user-menu" id="user-menu" style="display: none;">
+        <span id="user-name"></span>
+        <button id="admin-btn" class="btn-secondary" style="display: none;">Admin</button>
+        <button id="logout-btn" class="btn-secondary">Logout</button>
+      </div>
     </div>
   </header>
 
   <section id="home" class="hero">
     <div class="container">
-      <h1>Welcome to <strong>Fsfi</strong> Group</h1>
+      <h1>Welcome to <span class="highlight">FSFI</span> Group</h1>
+      <p>Developing future football stars through elite training & event management</p>
+      <a href="#services" class="btn">Explore Services</a>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Fsfi Group is a football development non-profit company which consists of a sports event management constituent and an elite football development program. FSFI governs and runs the operations of the two components. It is the umbrella and vehicle in which the constituents operate.</p>
-    </div>
+  <section id="about" class="about section__container">
+    <h2 class="section__header">About Us</h2>
+    <p>
+      FSFI Group is a football development non-profit company consisting of
+      a sports event management division and an elite football development
+      program. FSFI governs and runs operations of both, serving as the umbrella
+      organization for all initiatives.
+    </p>
   </section>
 
-  <section id="services" class="programs">
-    <div class="container">
-      <h2>Our Services</h2>
-      <p>We specialize in sports events management and elite football training program.</p>
-      <div class="logos">
-        <div>
-          <h3>Sport Event Management</h3>
-          <a href="https://touchraleting03.github.io/Free_State_Football_Development_Initiative_Tournament/" target="_blank">
-            <img src="images/Logo.jpeg" alt="Logo 1" class="logo">
-          </a>
-        </div>
-        <div>
-          <h3>Elite Football Training Program</h3>
-          <a href="https://touchraleting03.github.io/Elite-football-program/" target="_blank">
-            <img src="images/051 logo.jpeg" alt="Logo 2" class="logo">
-          </a>
-        </div>
-       <!-- <div>
-          <h3>SC Elite Football Program</h3>
-          <a href="https://touchraleting03.github.io/SC_Elite_Football_Program/" target="_blank">
-            <img src="images/SC_Elite_Football_Logo.jpg" alt="SC_Elite_Football_Logo" class="logo">
-          </a>
-        </div>-->
+  <section id="services" class="programs section__container">
+    <h2 class="section__header">Our Services</h2>
+    <p class="section__subheader">
+      We specialize in sports event management and elite football training.
+    </p>
+    <div class="logos" aria-label="Our services">
+      <div class="service-card">
+        <a href="https://touchraleting03.github.io/Free_State_Football_Development_Initiative_Tournament/" target="_blank" rel="noopener">
+          <img src="/images/Logo.jpeg" alt="Sports Event Management logo" class="logo service-logo" loading="lazy" />
+          <h3 class="service-title">Sports Event Management</h3>
+        </a>
       </div>
+
+      <div class="service-card">
+        <a href="https://touchraleting03.github.io/Elite-football-program/" target="_blank" rel="noopener">
+          <img src="/images/051 logo.jpeg" alt="Elite Football Programs logo" class="logo service-logo" loading="lazy" />
+          <h3 class="service-title">Elite Football Programs</h3>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <img src="/images/services/sound-stage.png" alt="Sound and Stage logo" class="logo service-logo" loading="lazy" />
+        <h3 class="service-title">Sound and Stage</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="/images/services/marketing.png" alt="Marketing Solutions logo" class="logo service-logo" loading="lazy" />
+        <h3 class="service-title">Marketing Solutions</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="/images/services/sports-agency.png" alt="Sports Agency logo" class="logo service-logo" loading="lazy" />
+        <h3 class="service-title">Sports Agency</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery section__container">
+    <h2 class="section__header">Gallery</h2>
+    <div id="gallery-grid" class="gallery-grid">
+      <div class="loading">Loading gallery...</div>
     </div>
   </section>
 
@@ -65,11 +116,40 @@
     <div class="container">
       <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:fsfielite@gmail.com">fsfielite@gmail.com</a></p>
-        <p>Phone:+27 76 020 1924</p>
+        <p>Email: <a href="mailto:fsfielite@gmail.com">info@fsfigroup.co.za</a></p>
+        <p>Phone: <a href="tel:+27760201924">+27 76 020 1924</a></p>
+
+        <form id="contact-form" aria-label="Contact form">
+          <div id="form-message" class="form-message"></div>
+
+          <label for="name" class="sr-only">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+
+          <label for="email" class="sr-only">Email</label>
+          <input id="email" name="email" type="email" placeholder="Your email" required />
+
+          <label for="message" class="sr-only">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+
+          <button type="submit" id="submit-btn">Send Message</button>
+        </form>
       </section>
-      <p>&copy; 2025 Fsfi Group. All rights reserved.</p>
+      <p>&copy; 2025 FSFI Group. All rights reserved.</p>
     </div>
   </footer>
+
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="auth-form-container"></div>
+    </div>
+  </div>
+
+  <div id="admin-modal" class="modal">
+    <div class="modal-content admin-modal-content">
+      <span class="close">&times;</span>
+      <div id="admin-content"></div>
+    </div>
+  </div>
 </body>
 </html>
